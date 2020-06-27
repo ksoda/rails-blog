@@ -4,6 +4,10 @@ Creating blog app
 
 ## System dependencies
 
+```sh
+gem install bundler-audit
+```
+
 ## Database creation / initialization
 
 ```sh
