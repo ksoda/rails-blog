@@ -36,6 +36,9 @@ group :development do
   gem 'brakeman'
   gem 'lefthook'
   gem 'rubocop'
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
   gem 'solargraph'
 end
 
