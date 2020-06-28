@@ -29,4 +29,5 @@
 /.yardoc
 /doc
 
-/spec/examples.txt 
+/spec/examples.txt
+/coverage

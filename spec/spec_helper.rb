@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+SimpleCov.start
+
 # Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run
 # Instead, consider making a separate helper file
