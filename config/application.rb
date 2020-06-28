@@ -39,6 +39,7 @@ module Blog
       g.stylesheets false
       g.javascripts false
       g.helper false
+      g.assets false
     end
   end
 end
