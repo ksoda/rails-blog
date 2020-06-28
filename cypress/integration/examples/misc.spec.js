@@ -3,7 +3,7 @@
 // @ts-ignore
 const requiredExample = require("../../fixtures/example");
 
-context("Misc", () => {
+context.skip("Misc", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io/commands/misc");
   });
@@ -107,7 +107,7 @@ context("Misc", () => {
   });
 });
 
-context("Cookies", () => {
+context.skip("Cookies", () => {
   beforeEach(() => {
     Cypress.Cookies.debug(true);
 
@@ -185,7 +185,7 @@ context("Cookies", () => {
   });
 });
 
-context("Files", () => {
+context.skip("Files", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io/commands/files");
   });
@@ -299,7 +299,7 @@ context("Files", () => {
   });
 });
 
-context("Local Storage", () => {
+context.skip("Local Storage", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io/commands/local-storage");
   });
@@ -356,7 +356,7 @@ context("Local Storage", () => {
   });
 });
 
-context("Network Requests", () => {
+context.skip("Network Requests", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io/commands/network-requests");
   });

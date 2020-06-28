@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context("Navigation", () => {
+context.skip("Navigation", () => {
   beforeEach(() => {
     cy.visit("https://example.cypress.io");
     cy.get(".navbar-nav").contains("Commands").click();
