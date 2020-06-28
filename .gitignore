@@ -28,3 +28,5 @@
 
 /.yardoc
 /doc
+
+/spec/examples.txt 
