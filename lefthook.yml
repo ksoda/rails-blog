@@ -14,6 +14,9 @@ pre-push:
     spec:
       tags: backend ci
       run: bin/rake
+    audit:
+      tags: backend security
+      run: bundle exec brakeman --no-pager
 
 pre-commit:
   parallel: true
