@@ -17,6 +17,10 @@ FileUtils.chdir APP_ROOT do
 
   puts '== Installing dependencies =='
   system! 'gem install bundler --conservative'
+
+  puts "\n== Generate documentation =="
+  system! 'yard config --gem-install-yri'
+
   system('bundle check') || system!('bundle install')
 
   # puts "\n== Copying sample files =="
@@ -32,7 +36,4 @@ FileUtils.chdir APP_ROOT do
 
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'
-
-  puts "\n== Generating documentation =="
-  system! 'bundle exec yard gems'
 end

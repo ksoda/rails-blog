@@ -29,4 +29,4 @@ post-checkout:
   commands:
     docs:
       tags: backend docs
-      run: bundle exec yard gems
+      run: bundle exec yard
