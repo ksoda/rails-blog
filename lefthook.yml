@@ -23,7 +23,7 @@ pre-commit:
   commands:
     eslint:
       glob: "*.{js,ts}"
-      run: yarn eslint {staged_files}
+      run: yarn eslint {staged_files} --fix && git add
     rubocop:
       glob: "{Gemfile,*.rb}"
       run: bundle exec rubocop --safe-auto-correct --force-exclusion {staged_files} && git add
