@@ -45,6 +45,8 @@ Style/RedundantRegexpEscape:
 Style/SlicingWithRange:
   Enabled: true
 
+Style/AsciiComments:
+  Enabled: false
 Style/Documentation:
   Exclude:
     - db/migrate/*.rb
