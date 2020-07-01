@@ -6,12 +6,7 @@ Creating blog app
 
 ```sh
 gem install bundler-audit
-```
-
-## Database creation / initialization
-
-```sh
-docker run --rm --net=host -e POSTGRES_PASSWORD=secret postgres
+docker-compose run --rm rails bin/setup
 ```
 
 ## How to run the test suite
