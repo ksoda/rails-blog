@@ -27,6 +27,7 @@ services:
       # We store Rails cache and gems in volumes to get speed up on Docker for Mac
       - rails_cache:/app/tmp/cache
       - bundle:/bundle
+      - xdg_config:/root/.cache
     environment:
       HISTFILE: /app/log/.bash_history
       MALLOC_ARENA_MAX: 2
@@ -95,8 +96,20 @@ services:
       timeout: 3s
       retries: 30
 
+  cypress:
+    image: cypress/included:3.2.0
+    depends_on:
+      - rails
+    environment:
+      - CYPRESS_BASE_URL=http://rails:3000
+    # share the current folder as volume to avoid copying
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+
 volumes:
   bundle:
   postgres:
   redis:
   rails_cache:
+  xdg_config:
