@@ -1,19 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+<div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
+<p><%= notice %></p>
+</div>
+<% end %>
+
+<h1 class="text-6xl">
+<span><%= @article.published ? '' : 'Draft: ' %></span><%= @article.title %>
+</h1>
 
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
   <%= @article.body %>
 </p>
 
-<p>
-  <strong>Published:</strong>
-  <%= @article.published %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to 'Edit', edit_article_path(@article), class: 'text-blue-500 hover:text-blue-800' %> |
+<%= link_to 'Back', articles_path, class: 'text-blue-500 hover:text-blue-800' %>

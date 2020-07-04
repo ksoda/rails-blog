@@ -1,6 +1,12 @@
-<h1>Editing Article</h1>
+<h1 class="text-6xl">Editing Article</h1>
 
 <%= render 'form', article: @article %>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+<div class="flex">
+<span class="flex-auto">
+<%= link_to 'Show', @article, class: 'text-blue-500 hover:text-blue-800' %> |
+<%= link_to 'Back', articles_path, class: 'text-blue-500 hover:text-blue-800' %>
+</span>
+
+<%= link_to 'Destroy', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: 'flex-auto text-right text-blue-500 hover:text-red-800' %>
+</div>
