@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "cwd": "${workspaceRoot}",
+      "name": "Local: Listen for rdebug-ide running",
+      "remoteHost": "127.0.0.1",
+      "remotePort": "1234",
+      "remoteWorkspaceRoot": "${workspaceRoot}",
+      "request": "attach",
+      "type": "Ruby"
+    },
+    {
+      "cwd": "${workspaceRoot}",
+      "name": "Remote: Listen for rdebug-ide running on Docker",
+      "remoteHost": "0.0.0.0",
+      "remotePort": "1234",
+      "remoteWorkspaceRoot": "/app",
+      "request": "attach",
+      "type": "Ruby"
+    }
+  ]
+}

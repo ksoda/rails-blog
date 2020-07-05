@@ -1,3 +1,4 @@
 {
-  "solargraph.useBundler": true
+  "solargraph.useBundler": true,
+  "ruby.useBundler": true
 }
