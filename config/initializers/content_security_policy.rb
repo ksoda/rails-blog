@@ -11,7 +11,10 @@ Rails.application.config.content_security_policy do |policy|
   policy.font_src    :self, :https, :data
   policy.img_src     :self, :https, :data
   policy.object_src  :none
-  policy.script_src  :self, :https
+
+  # TODO: Remove Alpine.js
+  policy.script_src :unsafe_eval, :self, :https
+
   if Rails.env.development?
     # style-loader
     # https://github.com/rails/webpacker/blob/52386bc3784557ba02b9f5c0bcc29d22de64d2a6/docs/css.md#link-styles-from-your-rails-views
