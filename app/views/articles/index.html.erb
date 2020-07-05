@@ -1,8 +1,4 @@
-<% if notice %>
-<div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
-<p><%= notice %></p>
-</div>
-<% end %>
+<%= notice && render(partial: "components/banner/index", locals: {notice: notice}) %>
 
 <h1 class="text-center text-6xl">Articles</h1>
 
