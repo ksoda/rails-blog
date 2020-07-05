@@ -5,6 +5,7 @@
     "test": "exit 0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.4",
     "cypress": "^4.9.0",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
@@ -24,7 +25,7 @@
     "@rails/ujs": "^6.0.3-2",
     "@rails/webpacker": "5.1.1",
     "@tailwindcss/ui": "^0.3.0",
-    "alpinejs": "^2.4.1",
+    "lit-element": "^2.3.1",
     "tailwindcss": "^1.4.6",
     "turbolinks": "^5.2.0"
   },
@@ -40,9 +41,13 @@
       "Cypress": false,
       "cy": false
     },
+    "parser": "babel-eslint",
     "parserOptions": {
+      "sourceType": "module",
       "ecmaVersion": 11,
-      "sourceType": "module"
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
     },
     "settings": {
       "import/resolver": {

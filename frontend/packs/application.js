@@ -7,6 +7,7 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import "components/banner";
 import "pages/article";
 import { start } from "../main/index";
 
