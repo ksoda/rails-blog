@@ -7,6 +7,6 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import { run } from "../src/main";
+import { start } from "../main/index";
 
-run();
+start();
