@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "pretest": "yarn eslint frontend/ cypress/ && yarn tsc",
+    "pretest": "yarn stylelint frontend/ && yarn eslint frontend/ cypress/ && yarn tsc",
     "test": "exit 0"
   },
   "devDependencies": {
@@ -12,6 +12,10 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-unicorn": "^20.1.0",
     "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
     "typescript": "^3.9.5",
     "webpack-dev-server": "^3.11.0"
   },
@@ -22,5 +26,40 @@
     "alpinejs": "^2.4.1",
     "tailwindcss": "^1.4.6",
     "turbolinks": "^5.2.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2020": true,
+      "mocha": true
+    },
+    "globals": {
+      "expect": false,
+      "Cypress": false,
+      "cy": false
+    },
+    "parserOptions": {
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "unicorn"
+    ],
+    "rules": {
+      "unicorn/no-abusive-eslint-disable": "error"
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-prettier/recommended"
+    ]
   }
 }
