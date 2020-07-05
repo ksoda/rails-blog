@@ -38,7 +38,7 @@ interaction:
     service: backend
     environment:
       RAILS_ENV: test
-    command: bundle exec rspec
+    command: bundle exec rescue rspec
 
   rubocop:
     description: Lint ruby files
