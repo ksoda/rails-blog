@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController #:nodoc:
-  before_action :set_article, only: %i[show edit update destroy]
-
   # GET /articles
   # GET /articles.json
   def index
@@ -11,7 +9,9 @@ class ArticlesController < ApplicationController #:nodoc:
 
   # GET /articles/1
   # GET /articles/1.json
-  def show; end
+  def show
+    @article = article
+  end
 
   # GET /articles/new
   def new
@@ -19,7 +19,9 @@ class ArticlesController < ApplicationController #:nodoc:
   end
 
   # GET /articles/1/edit
-  def edit; end
+  def edit
+    @article = article
+  end
 
   # POST /articles
   # POST /articles.json
@@ -40,6 +42,7 @@ class ArticlesController < ApplicationController #:nodoc:
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    @article = article
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -54,6 +57,7 @@ class ArticlesController < ApplicationController #:nodoc:
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
+    @article = article
     @article.destroy
     respond_to do |format|
       format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
@@ -63,9 +67,8 @@ class ArticlesController < ApplicationController #:nodoc:
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_article
-    @article = Article.find(params[:id])
+  def article
+    Article.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
