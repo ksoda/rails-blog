@@ -35,7 +35,7 @@ context.skip("Cypress.Commands", () => {
     cy.get("button")
       // @ts-ignore
       .console("info")
-      .then(($button) => {
+      .then(() => {
         // subject is still $button
       });
   });

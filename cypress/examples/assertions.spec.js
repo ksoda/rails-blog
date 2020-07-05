@@ -162,6 +162,7 @@ context.skip("Assertions", () => {
         age: 20,
       };
 
+      // eslint-disable-next-line no-undef
       assert.isObject(person, "value is object");
     });
 

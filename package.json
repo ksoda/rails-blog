@@ -1,20 +1,22 @@
 {
   "license": "MIT",
   "scripts": {
-    "pretest": "yarn eslint cypress/ && yarn tsc",
+    "pretest": "yarn eslint frontend/ cypress/ && yarn tsc",
     "test": "exit 0"
   },
   "devDependencies": {
-    "@rails/ujs": "^6.0.3-2",
     "cypress": "^4.9.0",
     "eslint": "^7.3.1",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-unicorn": "^20.1.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.5",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@rails/ujs": "^6.0.3-2",
     "@rails/webpacker": "5.1.1",
     "@tailwindcss/ui": "^0.3.0",
     "alpinejs": "^2.4.1",
