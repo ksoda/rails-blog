@@ -44,7 +44,7 @@ group :development do
 
   gem 'debase'
   gem 'ruby-debug-ide'
-  # gem 'solargraph'
+  gem 'solargraph', git: 'https://github.com/castwide/solargraph.git', ref: '5c40eed341433eff92eff869bae9ee30483c9892'
   gem 'web-console'
 
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
