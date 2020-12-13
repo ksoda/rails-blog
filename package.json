@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "scripts": {
-    "pretest": "yarn stylelint frontend/ && yarn eslint frontend/ && yarn tsc",
+    "pretest": "yarn stylelint frontend/ && yarn eslint frontend/",
     "test": "exit 0"
   },
   "devDependencies": {
