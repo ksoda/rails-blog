@@ -39,3 +39,5 @@ yarn-debug.log*
 .yarn-integrity
 
 docker-compose.override.yml
+
+sorbet/rbi/hidden-definitions/errors.txt 

@@ -22,6 +22,9 @@ gem 'bootsnap', '~> 1.5', require: false
 gem 'strong_migrations', '~> 0.7'
 
 gem 'packwerk', '~> 1.1'
+gem 'sorbet', group: :development
+gem 'sorbet-runtime'
+
 gem 'webpacker', '~> 5.2'
 
 group :development, :test do

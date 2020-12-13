@@ -5,9 +5,12 @@
 pre-push:
   parallel: true
   commands:
-    lint:
+    lint-frontend:
       tags: frontend
       run: yarn test
+    lint-backend:
+      tags: backend
+      run: packwerk check && srb tc
     gems-audit:
       tags: backend security
       run: bundle audit
