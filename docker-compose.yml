@@ -1,4 +1,4 @@
-version: "2.4"
+version: "3.7"
 
 services:
   app: &app
@@ -39,10 +39,8 @@ services:
       WEBPACKER_DEV_SERVER_HOST: webpacker
       DISABLE_SPRING: 1
     depends_on:
-      database:
-        condition: service_healthy
-      # cache:
-      #   condition: service_healthy
+      - database
+      # - cache
 
   rails:
     <<: *backend
@@ -50,12 +48,9 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      database:
-        condition: service_healthy
-      cache:
-        condition: service_healthy
-      webpacker:
-        condition: service_started
+      - webpacker
+      - database
+      # - cache
 
   rails_debug:
     <<: *backend
@@ -65,12 +60,9 @@ services:
       - "3000:3000"
       - "26162:26162"
     depends_on:
-      database:
-        condition: service_healthy
-      cache:
-        condition: service_healthy
-      webpacker:
-        condition: service_started
+      - webpacker
+      - database
+      # - cache
 
   webpacker:
     <<: *app
