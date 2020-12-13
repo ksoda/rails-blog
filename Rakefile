@@ -13,4 +13,4 @@ RuboCop::RakeTask.new do |t|
 end
 
 task(:default).clear
-task default: %i[rubocop spec cypress:run]
+task default: %i[rubocop spec]

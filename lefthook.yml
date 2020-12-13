@@ -13,7 +13,7 @@ pre-push:
       run: bundle audit
     spec:
       tags: backend
-      run: dip run rake rubocop spec && docker-compose up --exit-code-from cypress cypress
+      run: dip run rake rubocop spec
     audit:
       tags: backend security
       run: bundle exec brakeman --no-pager

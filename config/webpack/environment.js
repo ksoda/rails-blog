@@ -1,4 +1,5 @@
 const { environment } = require("@rails/webpacker");
+const erb = require("./loaders/erb");
 
 for (const [name, loader] of ["css", "moduleCss"].map((name) => [
   name,
@@ -8,4 +9,5 @@ for (const [name, loader] of ["css", "moduleCss"].map((name) => [
   environment.loaders.insert(name, loader);
 }
 
+environment.loaders.prepend("erb", erb);
 module.exports = environment;

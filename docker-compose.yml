@@ -111,17 +111,6 @@ services:
       timeout: 3s
       retries: 30
 
-  cypress:
-    image: cypress/included:3.2.0
-    depends_on:
-      - rails
-    environment:
-      - CYPRESS_BASE_URL=http://rails:3000
-    # share the current folder as volume to avoid copying
-    working_dir: /e2e
-    volumes:
-      - ./:/e2e
-
 volumes:
   bundle:
   postgres:
