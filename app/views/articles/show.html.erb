@@ -1,6 +1,5 @@
 <simple-greeting message="<%= notice %>"></simple-greeting>
 
-<%= render "pages/article/index" do %>
 <h1 class="text-6xl">
 <span><%= @article.published ? '' : 'Draft: ' %></span><%= @article.title %>
 </h1>
@@ -8,7 +7,6 @@
 <p>
   <%= @article.body %>
 </p>
-<% end %>
 
 <%= link_to 'Edit', edit_article_path(@article), class: 'text-blue-500 hover:text-blue-800' %> |
 <%= link_to 'Back', articles_path, class: 'text-blue-500 hover:text-blue-800' %>
