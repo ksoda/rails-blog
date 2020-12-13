@@ -42,11 +42,6 @@ module.exports = function (api) {
       isTestEnv && "babel-plugin-dynamic-import-node",
       "@babel/plugin-transform-destructuring",
       [
-        // BEFORE class-properties
-        "@babel/plugin-proposal-decorators",
-        { decoratorsBeforeExport: true },
-      ],
-      [
         "@babel/plugin-proposal-class-properties",
         {
           loose: true,
@@ -62,8 +57,6 @@ module.exports = function (api) {
         "@babel/plugin-transform-runtime",
         {
           helpers: false,
-          regenerator: true,
-          corejs: false,
         },
       ],
       [

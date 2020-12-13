@@ -25,7 +25,7 @@ pre-commit:
       glob: "*.js"
       run: "yarn prettier --write {staged_files} && yarn eslint {staged_files} && git add {staged_files}"
     css:
-      glob: "*.{css,pcss}"
+      glob: "*.{css,scss}"
       run: "yarn prettier --write {staged_files} && yarn stylelint --fix {staged_files} && git add {staged_files}"
     rubocop:
       glob: "{Gemfile,*.rb}"

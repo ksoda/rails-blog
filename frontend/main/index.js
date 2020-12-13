@@ -1,4 +1,4 @@
-import "./application.pcss";
+import "./application.scss";
 import Rails from "@rails/ujs";
 import Turbolinks from "turbolinks";
 
