@@ -9,6 +9,8 @@
 
 import { start } from "../main/index";
 import { main } from "./hello_svelte";
+import { main as tsMain } from "./hello_typescript";
 
 start();
 main();
+tsMain();
