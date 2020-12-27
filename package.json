@@ -1,7 +1,10 @@
 {
   "license": "MIT",
   "scripts": {
-    "pretest": "yarn stylelint frontend/ && yarn eslint frontend/",
+    "pretest": "yarn run format && yarn run lint:js",
+    "lint:css": "yarn stylelint 'frontend/**/*.css'",
+    "lint:js": "yarn eslint frontend/",
+    "format": "yarn prettier -c frontend/",
     "test": "exit 0"
   },
   "devDependencies": {
@@ -24,6 +27,8 @@
     "@rails/ujs": "^6.0.3-2",
     "@rails/webpacker": "5.2.1",
     "@tailwindcss/ui": "^0.3.0",
+    "svelte": "^3.31.0",
+    "svelte-loader": "^2.13.6",
     "tailwindcss": "^1.4.6",
     "turbolinks": "^5.2.0"
   },
@@ -70,6 +75,11 @@
       "plugin:import/errors",
       "plugin:import/warnings",
       "plugin:prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "plugins": [
+      "svelte"
     ]
   },
   "stylelint": {

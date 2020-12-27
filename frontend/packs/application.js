@@ -8,5 +8,7 @@
 // const imagePath = (name) => images(name, true)
 
 import { start } from "../main/index";
+import { main } from "./hello_svelte";
 
 start();
+main();
